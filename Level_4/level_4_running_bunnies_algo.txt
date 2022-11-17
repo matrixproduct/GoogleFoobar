@@ -1,0 +1,40 @@
+solution(times, time_limit)
+
+
+
+n = total number of bunnies
+s = number of already saved bunnies
+l = number of bunnies not saved yet
+n = l + s
+T = time_limit
+saved = list of saved bunnies
+left = list of not saved bunnies
+position = current position
+visited = {site: [[saved1, T1], [saved2, T2],...]} already visited sites with the corresponding values of saved sets and T
+
+
+is_enough_time(left)
+''' Check whether it is enough time to save all left bunnies
+    iterating over all paths representing permutations (? not necessary to check all permutations) of all sites with left bunnies
+    It prevents the algorithm to get in a trap of an unbounded increase of T'''
+
+rec_sol(times, T, left, position, visited)
+    if position == bulkhead and T >= 0 and s == n
+        return  all
+
+    if is_enough_time
+        return all
+
+    for site in all sites except position:
+        go to site and check whether
+        i) it is reachable
+        ii) it is not visited or the situation is improved, i.e. s increases or T increases
+        then call re_sol with updated parameters
+    if position == bulkhead and T >= 0
+        return saved
+    if no sites are reachable then
+        return []
+
+worth_to_visit(times, visited, site)
+if site not in visited
+
